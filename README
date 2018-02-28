@@ -1,187 +1,14 @@
-					ECS 140 HOMEWORK-2					name: j suhas
-												s:id: 915623705
+This Project is  all about converting one language to onother language.
 
+which includes many stages like:-
 
-Part1:-
+1)	Syntax check.
+2)	Semantic check.
+3)	Scope Check.
+4)	Converting/ Generating C Code.
+5) 	Adding Functionalities.
 
-
-
-modification files:-
-
-TK.java 
-Scan .java:-
-
-
-
-
-modification:-
-
-three tokens( "="  , "~"  , " >"  ) are added in the "TK" file the same tokens are referenced in the Scan file
-
-
-
-
-
-
-
-part2:-
-
-
-
-
-modification files:-
-
-parser.java 
-
-
-added files:-
-
-Stack.java    - it has stack of lists one for each block. list pushed and poped when needed.
-ll.java       - to keep track of list of variables at different blocks
-llval.java    - to keep track of list of values at different blocks
-
-all these added files are clearly defined in their respective files using comments.
-
-
-
-modification:-
-
-reference to stack is created for storing variables for various blocks
-
-checks whether id input given is present or not in list if not adds to list
-
-according to grammar checks the respective tokens presence and calls needed functions
-
-handles scopin carefully at declaration stage.
-
-if any undeclared variable is used program stops executing
-
-
-
-
-
-
-part3:-
-
-
-
-modification files:-
-
-parser.java
-ll.java 
-Stack.java
-
-all these files are clearly defined in their respective files using comments.
-
-
-
-modification:-
-
-
-
-ll.java:-
-
-makeempty()				// clear is useful when one list s removed from stack its traces has to removed
-
-
-
-Stack.java:-
-
-calls makeempty to remove traces of old list of variables which is now removed 
-
-isele() 	checks if a variable present a top level if not goes down the stack and checks if not goes again  and son upto global area
-
-iselethislevel() 	 checks if a variable presence at only current or top level
-
-scoping(int a,String b)  checks a variable presence when scoping is used to access at specific variable.
-
-
-
-parser:-
-
-if scope is given out of range stops executing by giving error
-
-
-
-
-
-
-
-
-part4:-
-
-
-
-modification files:-
-
-parser.java
-
-
-this file are clearly defined in their respective files using comments.
-
-
-
-modification:-
-
-
-program()   -	added many print statements in the process of generating the c code here it creates a main funtion for current program
-
-
-block()    -    added print statements for {} whenever block is created
-
-//added prints where c coressponding code needs
-
-
-
-
-
-
-
-part5:-
-
-
-
-added grammar in E language:-
-
-statementlist		::=		refid|print|do|if|for
-
-for			::=		'"' id assignment expr ';' condition ';' expr assignment expr '?' block
-
-condition		::=		expr grtless
-
-grtless			::=		'&'|'$'
-
-
-
-
-
-modification files:-
-
-parser.java
-Scan.java
-TK.java
-
-
-these files are clearly defined in their respective files using comments.
-
-
-
-
-modification:-
-
-TK.java:-
-
-added tokens for begin of for("), end of for(`) and end of for block(?) and referenced in Scan.java
-
-
-Parser.java:-
-
- added functions for 'For' and condition and called functions and checks respective tokens as described in grammar above
-
-
-
-example:
-
+Some of the result's of	this project are Shown Below.
 
 e program1:-
 
@@ -272,9 +99,5 @@ output of c code:
 11
 
 
-
-
 conclusion:-
-
-
-result code is working well even with new for functionality.
+result code is working well even with new functionality on For Loops.
